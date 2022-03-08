@@ -1,19 +1,19 @@
 ! ГАЙД В ПРОЦЕССЕ НАПИСАНИЯ
 
-# Установка своего VPN-сервера WireGuard на VPS-хостинг с Ubuntu
+# Установка своего VPN-сервера WireGuard на VPS-хостинге с Ubuntu
 
-[WireGuard](https://www.wireguard.com/) – самый актуальный и быстрый VPN-протокол. Обеспечивает максимальную скорость работы и надежную криптографическую защиту.
+[WireGuard](https://www.wireguard.com/) – самый актуальный и быстрый VPN-протокол на сегодняшний день. Обеспечивает максимальную скорость работы и надежную криптографическую защиту.
 
 ## 1. Хостинг и клиенты
 
 VPS-хостинг желательно выбирать в [Европе](https://ru.hostings.info/filters/europe-hosting/vps-vds
-), но сейчас оплатить его уже будет проблематично. Можно выбрать [российский хостинг](https://ru.hostings.info/filters/russia/vps-vds) с серверами в Европе. У меня хостинг от [FirstByte](https://firstbyte.ru/?from=87020) с сервером в Нидерландах за 111₽ в месяц. Если будете брать там, то буду признателен, если перейдете по моей ссылке или воспользуетесь моим промокодом *refer_87020*.
+), но сейчас оплатить его уже будет проблематично. Можно выбрать [российский хостинг](https://ru.hostings.info/filters/russia/vps-vds) с серверами в Европе. У меня хостинг от [FirstByte](https://firstbyte.ru/?from=87020) с сервером в Нидерландах за 111₽ в месяц. Если будете брать там, то буду признателен если перейдете по моей ссылке или воспользуетесь моим промокодом *refer_87020*.
 
-Важно выбрать сервер с [KVM-виртуализацией](https://firstbyte.ru/vps-vds/kvm-ssd-eu/?from=87020), так как WireGuard Manager нельзя установить на сервер с OpenVZ-виртуализацией. На этапе выбора ОС для сервера, выберите Ubuntu 18.04, однако скрипт [WireGuard Manager](https://github.com/complexorganizations/wireguard-manager) может развернуть и на других [дистрибутивах Linux](https://github.com/complexorganizations/wireguard-manager#-compatibility-with-linux-distro).
+Важно выбрать сервер с [KVM-виртуализацией](https://firstbyte.ru/vps-vds/kvm-ssd-eu/?from=87020), так как WireGuard Manager нельзя установить на сервер с OpenVZ-виртуализацией. На этапе выбора ОС для сервера, выберите Ubuntu 18.04, однако скрипт WireGuard Manager может развернуть и на других [дистрибутивах Linux](https://github.com/complexorganizations/wireguard-manager#-compatibility-with-linux-distro).
 
 На поднятие сервера нужно время, после чего приходит письмо из которого нам нужно три пункта: IP-адрес сервера, имя пользователя (root), пароль.
 
-Заранее поставьте все необходимые [клиенты WireGuard](https://www.wireguard.com/install/).
+Заранее установите необходимые вам [клиенты WireGuard](https://www.wireguard.com/install/).
 
 ## 2. Подключение к серверу
 
