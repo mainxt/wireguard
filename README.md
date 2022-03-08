@@ -57,17 +57,17 @@ chmod +x /usr/local/bin/wireguard-manager.sh
 bash /usr/local/bin/wireguard-manager.sh
 ```
 
-Установка будет разделена на этапы, выбирайте везде Recommended, но остановитесь на следующих этапах:
+Установка будет разделена на этапы, выбираем везде Recommended, но останавливаемся на следующих этапах:
 
-- «**Would you like to install unbound**», выберите «**Custom (Advanced)**».
-- «**Let the users choose their custom dns provider**», выберите «**Cloudflare (Recommended)**».
+- «**Would you like to install unbound**», выбираем «**Custom (Advanced)**».
+- «**Let the users choose their custom dns provider**», выбираем «**Cloudflare (Recommended)**».
 - «**What would you like to name your first WireGuard peer**», удаляем длинную строку и задаем название клиентскому файлу конфигурации в виде одного слова wireguard.
 
 После чего начнется установка WireGuard, которая займет не больше 5 минут.
 
-5. По окончанию установки будет отображен QR-код для подключения с мобильного клиента WireGuard. Выберите в приложении «**Сканировать QR-код**» и попробуйте подключиться.
+5. По окончанию установки будет отображен QR-код для подключения с мобильного клиента WireGuard. Выбираем в приложении «**Сканировать QR-код**» и пробуем подключиться.
 
-На этом установка WireGuard для доступа с вашего мобильного устройства завершена.
+На этом установка WireGuard для доступа с мобильного устройства завершена.
 
 ## 4. Добавление новых устройств<a name="clients"></a>
 
