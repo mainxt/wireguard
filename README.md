@@ -7,44 +7,54 @@ WireGuard – самый актуальный и быстрый VPN-проток
 ## 1. Хостинг и клиенты
 
 VPS-хостинг желательно выбирать в [Европе](https://ru.hostings.info/filters/europe-hosting/vps-vds
-), но сейчас оплатить его уже будет проблематично. Можно выбрать [российский хостинг](https://ru.hostings.info/filters/russia/vps-vds) с серверами в Европе. У меня хостинг от [FirstByte](https://firstbyte.ru/?from=87020) с сервером в Нидерландах за 111₽ в месяц. Если будете брать там, то буду признателен, если перейдете по моей ссылке или воспользуетесь моим промокодом refer_87020.
+), но сейчас оплатить его уже будет проблематично. Можно выбрать [российский хостинг](https://ru.hostings.info/filters/russia/vps-vds) с серверами в Европе. У меня хостинг от [FirstByte](https://firstbyte.ru/?from=87020) с сервером в Нидерландах за 111₽ в месяц. Если будете брать там, то буду признателен, если перейдете по моей ссылке или воспользуетесь моим промокодом *refer_87020*.
 
 На этапе выбора ОС для виртуальной машины, выберите Ubuntu 20.04, однако скрипт WireGuard Manager может развернуть и на других дистрибутивах Linux.
 
 На поднятие сервера нужно время, после чего приходит письмо из которого нам нужно три пункта: IP-адрес сервера, имя пользователя (обычно root), пароль.
 
-Заранее поставьте все необходимые [клиенты WireGuard](https://www.wireguard.com/install/) для Windows/Linux/MacOS/iOS/Android.
+Заранее поставьте все необходимые [клиенты WireGuard](https://www.wireguard.com/install/).
 
-## 2. ПОДКЛЮЧЕНИЕ К СЕРВЕРУ
+## 2. Подключение к серверу
 
-Если у вас российский хостинг, то взаимодействие с виртуальной машиной обычно происходит через запуск VNC-клиента в панели управления сервером, но я на винде предпочитаю использовать программу PuTTY. Запускаем VNC-клиент или вводим в PuTTY IP-адрес сервера, после подключения вводим логин (root) и пароль от сервера.
+Если у вас российский хостинг, то взаимодействие с виртуальной машиной обычно происходит через запуск VNC-клиента в панели управления сервером, но я на винде предпочитаю использовать программу [PuTTY](https://www.putty.org/). Запускаем VNC-клиент или вводим в PuTTY IP-адрес сервера, после подключения вводим логин (root) и пароль от сервера.
 
 После подключения к виртуальной машине проверьте, обновлена ли ОС, выполнив следующую команду, в PuTTY текст из буфера обмена вставляется правой кнопкой мыши:
 
+```
 apt-get update && apt-get upgrade
+```
 
-3. УСТАНОВКА WIREGUARD MANAGER
+## 3. Установка WireGuard Manager
 
 1. Сначала установим инструмент curl:
 
+```
 apt install curl -y
+```
 
 2. Затем запустим скачивание скрипта установки:
 
+```
 curl https://raw.githubusercontent.com/complexorganizations/wireguard-manager/main/wireguard-manager.sh --create-dirs -o /usr/local/bin/wireguard-manager.sh
+```
 
 3. Делаем скрипт исполняемым:
 
+```
 chmod +x /usr/local/bin/wireguard-manager.sh
+```
 
 4. Запускаем установку:
 
+```
 bash /usr/local/bin/wireguard-manager.sh
+```
 
 Установка разделена на этапы, выбирайте везде Recommended, но остановитесь на следующих этапах:
 
 - "Would you like to install unbound", выберите "Custom (Advanced)".
-- "Let the users choose their custom dns provider", выберите "Cloudflare (Recommended)". Другие варианты тоже рабочие, например от Google, но вы всегда сможете изменить DNS-сервер позже, выбрав из списка популярных DNS-провайдеров. https://kb.adguard.com/ru/general/dns-providers
+- "Let the users choose their custom dns provider", выберите "Cloudflare (Recommended)".
 - "What would you like to name your first WireGuard peer", задаем название клиентскому файлу конфигурации в виде одного слова, например wireguard.
 
 Настройка и затем установка WireGuard займет не больше 5 минут.
@@ -55,16 +65,20 @@ bash /usr/local/bin/wireguard-manager.sh
 
 Например для клиента WireGuard для Windows нужно будет создать еще один конфигурационный файл. Для этого мы запускаем скрипт WireGuard Manager с помощью уже знакомой команды:
 
+```
 bash /usr/local/bin/wireguard-manager.sh
+```
 
 Выбираем 5-й пункт "Add WireGuard Peer (client)", удаляем длинную строку и пишем wireguard-windows. Появится QR-код, но нам теперь нужен путь к конфигурационному файлу под ним. Открываем содержимое файла следующей командой:
 
+```
 nano /etc/wireguard/clients/wireguard-windows-wg0.conf
+```
 
 Затем копируем весь текст в любой блокнот и сохраняем файл как wireguard-windows-wg0.conf
 
-3## . ПОДКЛЮЧЕНИЕ К VPN
+## 3. Подключение к VPN
 
 Нажимаем в клиенте WireGuard для Windows "Добавить туннель" и выбираем конфигурационный файл wireguard-windows-wg0.conf и пробуем подключиться.
 
-Заходим сюда и видим IP-адрес и страну сервера. Проверяем доступ к сайтам и замеряем скорость на Speedcheck. https://whatismyipaddress.com/
+Заходим [сюда](https://whatismyipaddress.com/) и видим IP-адрес и страну сервера. Проверяем доступ к сайтам и замеряем скорость на [Speedcheck](https://www.speedcheck.org/ru/).
