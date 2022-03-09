@@ -19,7 +19,7 @@ VPS-хостинг желательно выбирать в [Европе](https
 
 На поднятие сервера нужно время, после чего приходит письмо из которого нам нужно три пункта: IP-адрес сервера, имя пользователя (root), пароль.
 
-Заранее установите необходимые вам [клиенты WireGuard](https://www.wireguard.com/install/).
+Заранее установите необходимые вам WireGuard: [Windows](https://download.wireguard.com/windows-client/wireguard-installer.exe), [macOS](https://itunes.apple.com/us/app/wireguard/id1451685025?ls=1&mt=12), [Android](https://play.google.com/store/apps/details?id=com.wireguard.android), [iOS](https://itunes.apple.com/us/app/wireguard/id1441195209?ls=1&mt=8).
 
 ## 2. Подключение к терминалу сервера<a name="connect"></a>
 
