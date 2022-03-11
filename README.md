@@ -86,7 +86,7 @@ bash ./wireguard-install.sh
 nano ./wg0-client-wireguard-win.conf
 ```
 
-Затем копируем весь текст в любой блокнот и сохраняем файл с именем wireguard-windows-wg0.conf
+Затем копируем весь текст в любой текстовой редактор и сохраняем файл с именем wireguard-windows-wg0.conf
 
 ## 5. Подключение к WireGuard<a name="connectvpn"></a>
 
