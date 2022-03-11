@@ -42,6 +42,8 @@ apt-get update && apt-get upgrade
 
 ## 3. Установка сервера WireGuard <a name="install"></a>
 
+Будем исподьзовать популярный скрипт WireGuard installer от angristan.
+
 1. Сначала установим инструмент curl:
 
 ```
