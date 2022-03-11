@@ -5,7 +5,7 @@
 
 1. [Хостинг и клиенты](#hosting)
 2. [Подключение к терминалу сервера](#connect)
-3. [Установка WireGuard Manager](#install)
+3. [Установка WireGuard](#install)
 4. [Добавление новых устройств](#clients)
 5. [Подключение к WireGuard VPN](#connectvpn)
 
@@ -39,7 +39,7 @@ ssh root@IP-адрес
 apt-get update && apt-get upgrade
 ```
 
-## 3. Установка WireGuard Manager<a name="install"></a>
+## 3. Установка WireGuard <a name="install"></a>
 
 1. Сначала установим инструмент curl:
 
@@ -55,7 +55,7 @@ chmod +x wireguard-install.sh
 ./wireguard-install.sh
 ```
 
-3. Появится ./wireguard-install.sh, жмем enter
+3. Появится строка ./wireguard-install.sh, жмем Enter.
 
 4. Отвечаем на все вопросы утвердительно, когда спросит имя клиента пишем wireguard, о окончанию установки будет отображен QR-код (рекомендую сохранить) 
 
@@ -76,7 +76,7 @@ nano /root/wg0-client-wireguard.conf
 Например для клиента WireGuard для Windows нужно будет создать еще один конфигурационный файл. Для этого мы запускаем скрипт WireGuard Manager с помощью уже знакомой команды:
 
 ```
-bash /usr/local/bin/wireguard-manager.sh
+bash /root/wireguard-install.sh
 ```
 
 Выбираем 5-й пункт «**Add WireGuard Peer (client)**», удаляем длинную строку и пишем wireguard-windows. Появится QR-код, но нам теперь нужен не он, а путь к конфигурационному файлу под ним. Открываем содержимое файла следующей командой:
