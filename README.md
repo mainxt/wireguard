@@ -42,7 +42,7 @@ apt-get update && apt-get upgrade
 
 ## 3. Установка сервера WireGuard <a name="install"></a>
 
-Будем использовать популярный скрипт WireGuard installer от angristan.
+Существует автоматический способ установки сервера при помощи клиента [AmneziaVPN](https://ru.amnezia.org/) о котором я писал в своем [телеграм-канале](https://t.me/avennom/23), но в этом гайде мы будем использовать популярный скрипт WireGuard installer от angristan.
 
 1. Сначала установим инструмент curl:
 
