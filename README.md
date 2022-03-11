@@ -50,30 +50,18 @@ apt install curl -y
 2. Затем запустим скачивание скрипта установки:
 
 ```
-curl https://raw.githubusercontent.com/complexorganizations/wireguard-manager/main/wireguard-manager.sh --create-dirs -o /usr/local/bin/wireguard-manager.sh
+curl -O https://raw.githubusercontent.com/angristan/wireguard-install/master/wireguard-install.sh
+chmod +x wireguard-install.sh
+./wireguard-install.sh
 ```
 
-3. Делаем скрипт исполняемым:
+3 Появится ./wireguard-install.sh, жмем enter
+
+4. Отвечаем на все вопросы утвердительно, когда спросит имя клиента пишем wireguard, о окончанию установки будет отображен QR-код (рекомендую сохранить) для подключения с мобильного клиента WireGuard. Выбираем «**Сканировать QR-код**» и пробуем подключиться к VPN.
 
 ```
-chmod +x /usr/local/bin/wireguard-manager.sh
+nano /root/wg0-client-wireguard.conf
 ```
-
-4. Запускаем установку:
-
-```
-bash /usr/local/bin/wireguard-manager.sh
-```
-
-Установка будет разделена на этапы, выбираем везде Recommended, но останавливаемся на следующих этапах:
-
-- «**Would you like to install unbound**», выбираем «**Custom (Advanced)**».
-- «**Let the users choose their custom dns provider**», выбираем «**Cloudflare (Recommended)**».
-- «**What would you like to name your first WireGuard peer**», удаляем длинную строку и задаем название клиентскому файлу конфигурации в виде одного слова wireguard.
-
-После чего начнется установка WireGuard, которая займет не больше 5 минут.
-
-5. По окончанию установки будет отображен QR-код (рекомендую сохранить) для подключения с мобильного клиента WireGuard. Выбираем «**Сканировать QR-код**» и пробуем подключиться к VPN.
 
 На этом установка WireGuard для доступа с мобильного устройства завершена.
 
