@@ -98,4 +98,4 @@ nano /root/wg0-client-wireguard-win.conf
 
 Заходим [сюда](https://whatismyipaddress.com/) и видим IP-адрес и страну вашего сервера.
 
-Проверяем доступ к [заблокированным](https://twitter.com/) сайтам и замеряем скорость на [Speedcheck](https://www.speedcheck.org/ru/).
+Проверяем доступ к заблокированным [сайтам](https://twitter.com/) и замеряем [скорость](https://www.speedcheck.org/ru/).
