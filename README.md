@@ -5,9 +5,9 @@
 
 1. [Хостинг и клиенты](#hosting)
 2. [Подключение к терминалу сервера](#connect)
-3. [Установка WireGuard](#install)
+3. [Установка сервера WireGuard](#install)
 4. [Добавление других клиентов](#clients)
-5. [Подключение к WireGuard VPN](#connectvpn)
+5. [Подключение к WireGuard](#connectvpn)
 
 
 ## 1. Хостинг и клиенты <a name="hosting"></a>
@@ -39,7 +39,7 @@ ssh root@IP-адрес
 apt-get update && apt-get upgrade
 ```
 
-## 3. Установка WireGuard <a name="install"></a>
+## 3. Установка сервера WireGuard <a name="install"></a>
 
 1. Сначала установим инструмент curl:
 
@@ -87,7 +87,7 @@ nano /root/wg0-client-wireguard-win.conf
 
 Затем копируем весь текст в любой блокнот и сохраняем файл с именем wireguard-windows-wg0.conf
 
-## 5. Подключение к WireGuard VPN<a name="connectvpn"></a>
+## 5. Подключение к WireGuard<a name="connectvpn"></a>
 
 Подключение с мобильного устройства самое простое. После сканирования QR-кода, создается соединение к вашему серверу и вам остается только к нему подключиться.
 
