@@ -65,7 +65,7 @@ chmod +x wireguard-install.sh
 2. Для компьютеров открываем конфигурационный файл командой:
 
 ```
-nano /root/wg0-client-wireguard.conf
+nano ./wg0-client-wireguard.conf
 ```
 
 Затем копируем весь текст в любой текстовой редактор и сохраняем файл с именем wg0-client-wireguard.conf
@@ -77,13 +77,13 @@ nano /root/wg0-client-wireguard.conf
 1. Для этого мы повторно запускаем скрипт установки с помощью команды:
 
 ```
-bash /root/wireguard-install.sh
+bash ./wireguard-install.sh
 ```
 
 2. Выбираем 1-й пункт «**Add a new user**», далее пишем к примеру **wireguard-win** (не более 15 символов), соглашаемся с предложенными IP-адресами. Появится QR-код, но нам теперь нужен не он, а путь к конфигурационному файлу под ним. Открываем содержимое файла следующей командой:
 
 ```
-nano /root/wg0-client-wireguard-win.conf
+nano ./wg0-client-wireguard-win.conf
 ```
 
 Затем копируем весь текст в любой блокнот и сохраняем файл с именем wireguard-windows-wg0.conf
