@@ -61,9 +61,11 @@ chmod +x wireguard-install.sh
 
 <img src="https://raw.githubusercontent.com/avenom/wireguard/main/Wireguard/1.png">
 
-4. Отвечаем на все вопросы утвердительно, попросит нажать любую клавишу для начала установки, затем попросит ввести имя клиента (Client name) пишем **wireguard**, соглашаемся с предложенными IP-адресами, после чего будет отображен QR-код.
+4. Отвечаем на все вопросы утвердительно, попросит нажать любую клавишу для начала установки, затем попросит ввести имя клиента (Client name) пишем **wireguard**, соглашаемся с предложенными IP-адресами.
 
 <img src="https://raw.githubusercontent.com/avenom/wireguard/main/Wireguard/2.png">
+
+После чего будет отображен QR-код.
 
 <img src="https://raw.githubusercontent.com/avenom/wireguard/main/Wireguard/3.png">
 
