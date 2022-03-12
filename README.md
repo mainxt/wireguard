@@ -80,7 +80,7 @@ chmod +x wireguard-install.sh
 nano ./wg0-client-wireguard.conf
 ```
 
-Затем копируем весь текст в любой текстовой редактор и сохраняем файл с именем **wg0-client-wireguard.conf**.
+Затем копируем весь текст в любой текстовой редактор и сохраняем файл с именем **wg0-client-wireguard.conf** и импортируем в клиенте WireGuard.
 
 ## 4. Добавление других клиентов<a name="clients"></a>
 
@@ -100,7 +100,7 @@ bash ./wireguard-install.sh
 nano ./wg0-client-wireguard-win.conf
 ```
 
-Затем копируем весь текст в любой текстовой редактор и сохраняем файл с именем **wg0-client-wireguard-win.conf**.
+Затем копируем весь текст в любой текстовой редактор и сохраняем файл с именем **wg0-client-wireguard-win.conf** и импортируем в клиенте WireGuard.
 
 ## 5. Подключение к WireGuard<a name="connectvpn"></a>
 
