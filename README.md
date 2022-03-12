@@ -89,6 +89,8 @@ nano ./wg0-client-wireguard.conf
 bash ./wireguard-install.sh
 ```
 
+<img src="https://raw.githubusercontent.com/avenom/wireguard/main/Wireguard/4.png">
+
 2. Выбираем 1-й пункт «**Add a new user**», далее пишем имя например для клиента в Windows **wireguard-win** (не более 15 символов), соглашаемся с предложенными IP-адресами. Появится QR-код, но нам теперь нужен не он, а путь к конфигурационному файлу под ним. Открываем содержимое файла следующей командой:
 
 ```
