@@ -65,6 +65,8 @@ chmod +x wireguard-install.sh
 
 <img src="https://raw.githubusercontent.com/avenom/wireguard/main/Wireguard/2.png">
 
+<img src="https://raw.githubusercontent.com/avenom/wireguard/main/Wireguard/3.png">
+
 Далее определимся с клиентом WireGuard:
 1. Для смартфонов открываем мобильный клиент WireGuard, выбираем «**Сканировать QR-код**» и пробуем подключиться к VPN.
 2. Для компьютеров открываем конфигурационный файл командой:
